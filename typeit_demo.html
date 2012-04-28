@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/typeit.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.vtype('probook', function() {
+				document.location.href = 'http://probook.bg/';
+			});
+			$.vtype('save', function() {
+				alert("Saved!");
+			});
+		});
+	</script>
+</head>
+</html>
