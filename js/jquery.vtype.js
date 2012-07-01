@@ -3,7 +3,7 @@ $.vtype = function(word, callback, args) {
 	word = word.toLowerCase();
 
 	$('body').keydown(function(e) {
-	if(!args) args=[]; // IE barks when args is null
+		if(!args) args=[]; // IE barks when args is null
 		var code = (e.keyCode ? e.keyCode : e.which);
 		var character = String.fromCharCode(code).toLowerCase();
 

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.vhotkeys.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.vhotkey('a', function() {
+				alert("a pressed!");
+			});
+			$.vhotkey(18, function() {
+				alert('alt pressed!');
+			});
+		});
+	</script>
+</head>
+</html>
