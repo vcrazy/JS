@@ -10,7 +10,11 @@ $.vtype = function(word, callback, args) {
 		if(character == word.charAt(curr.length)){
 			curr += character;
 		}else{
-			curr = '';
+			if(character == word.charAt(0)){
+				curr = character;
+			}else{
+				curr = '';
+			}
 		}
 
 		if(curr.length == word.length){
