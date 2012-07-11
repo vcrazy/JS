@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.vincircle.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.vincircle($('#numbers1 span'), $('#clock'));
+			$.vincircle($('#numbers2 span'), $('#rect1'));
+			$.vincircle($('#numbers3 span'), $('#rect2'));
+		});
+	</script>
+</head>
+<body>
+	<div id="clock" style="width: 500px; height: 500px; border: 1px solid red;">
+		
+	</div>
+	<div id="numbers1" style="display: none;">
+		<span>0</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span>10</span>
+		<span>11</span>
+	</div>
+
+	<div id="rect1" style="width: 400px; height: 200px; border: 1px solid green;">
+		
+	</div>
+	<div id="numbers2" style="display: none;">
+		<span>0</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span>10</span>
+		<span>11</span>
+	</div>
+
+	<div id="rect2" style="width: 200px; height: 400px; border: 1px solid blue;">
+		
+	</div>
+	<div id="numbers3" style="display: none;">
+		<span>0</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span>10</span>
+		<span>11</span>
+	</div>
+</body>
+</html>
