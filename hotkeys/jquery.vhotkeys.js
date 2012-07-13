@@ -1,4 +1,11 @@
-// works with single keys and char codes
+/*  @author:  Vihren 'vcrazy' Ganev <vcrazy@abv.bg>, <http://ganev.bg>, <https://github.com/vcrazy>
+ *  
+ *  Works with single keys and char codes!
+ *  
+ *  @example:
+ *	$.vhotkey('a', function(){alert("a pressed!");});
+ *	$.vhotkey(18, function(){alert('alt pressed!');});
+ */
 
 $.vhotkey = function(key, callback, args) {
 	if(typeof key === 'string'){

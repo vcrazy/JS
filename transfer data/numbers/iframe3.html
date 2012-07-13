@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viframes.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var refresh = Math.ceil(Math.max(1, Math.random()*10)*10000)/10000;
+			$('h3').html('Refreshes every ' + refresh + 's.');
+			var started = false;
+
+			function getnumber(){
+				var n = $.viget('number');
+				started = n*1;
+
+				if(started && n){
+					$('h1').html(n);
+				}
+				setTimeout(getnumber, refresh*1000);
+			}
+
+			getnumber();
+		});
+	</script>
+</head>
+<body>
+	<h1>Ready</h1>
+	<h3></h3>
+</body>
+</html>
+

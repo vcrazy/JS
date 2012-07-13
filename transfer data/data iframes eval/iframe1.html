@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viframes.js"></script>
+	<script type="text/javascript">
+		$.viset('iframe1', 'iframe1 should not be here');
+
+		$(document).ready(function(){
+			$.viset('objectkey', "$('body').html");
+			$.visetjson('objectvalue', $('body').html());
+		});
+	</script>
+</head>
+<body>
+	iframe1 is here!
+</body>
+</html>

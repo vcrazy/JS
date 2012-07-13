@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viframes.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			function gennum(i){
+				$.viset('number', i);
+				i++;
+				setTimeout(gennum, 1000, i);
+			}
+
+			gennum(1);
+		});
+	</script>
+</head>
+<body>
+	I am the number generator.
+</body>
+</html>

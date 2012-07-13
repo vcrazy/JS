@@ -1,4 +1,13 @@
-$.vtype = function(word, callback, args) {
+/*  @author:  Vihren 'vcrazy' Ganev <vcrazy@abv.bg>, <http://ganev.bg>, <https://github.com/vcrazy>
+ *  
+ *  Type word to do something.
+ *  
+ *  @example:
+ *	$.vhotword('save', function(){alert("Saved!");}); // When you type 'save' you will get alert.
+ *	$.vhotword('probook', function(){document.location.href = 'http://probook.bg/';}); // when you type 'probook' you will be redirected
+ */
+
+$.vhotword = function(word, callback, args) {
 	var curr = '';
 	word = word.toLowerCase();
 

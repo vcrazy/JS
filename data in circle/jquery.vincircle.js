@@ -1,3 +1,13 @@
+/*  @author:  Vihren 'vcrazy' Ganev <vcrazy@abv.bg>, <http://ganev.bg>, <https://github.com/vcrazy>
+ *  
+ *  @example:
+ *	$.vincircle($('#numbers1 span'), $('#clock'));
+ *	
+ * Means that we should get the html of all span elements inside #numbers1,
+ * put them in circle or oval (depends on #clock1)
+ * and then append them in #clock1
+ */
+
 $.vincircle = function(elements, parent){
 	var height = parent.height();
 	var width = parent.width();

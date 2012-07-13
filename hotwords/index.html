@@ -2,14 +2,14 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8" />
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.vtype.js"></script>
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.vhotwords.js"></script>
 	<script>
 		$(document).ready(function(){
-			$.vtype('probook', function() {
+			$.vhotword('probook', function() {
 				document.location.href = 'http://probook.bg/';
 			});
-			$.vtype('save', function() {
+			$.vhotword('save', function() {
 				alert("Saved!");
 			});
 		});

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viframes.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			function gethtml(){
+				var html = $.viget('objectkey');
+
+				if(!html){
+					setTimeout("gethtml", 1000);
+				}else{
+					eval($.viget('objectkey') + '(' + $.vigetjson('objectvalue') + ')');
+				}
+			}
+
+			gethtml();
+		});
+	</script>
+</head>
+<body>
+	iframe2 is here too!
+</body>
+</html>
+

@@ -2,45 +2,45 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8" />
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.vsave.js"></script>
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viframes.js"></script>
 	<script>
 		$(document).ready(function(){
 			var inputkey = 'input1';
 
 			$('#form1').live('submit', function(){
 				// sava a input
-				$.vsave(inputkey, $('input[name="field1"]').val());
+				$.viset(inputkey, $('input[name="field1"]').val());
 
 				// save a textarea
-				$.vsave('textareavalue', $('textarea[name="txtarea"]').val());
+				$.viset('textareavalue', $('textarea[name="txtarea"]').val());
 
 				// save all selects
 				$.each($('select'), function(){
-					$.vsave('select' + $(this).attr('name'), $(this).val());
+					$.viset('select' + $(this).attr('name'), $(this).val());
 				});
 
 				return true;
 			});
 
 			// load a input
-			var inputtxt = $.vload(inputkey);
+			var inputtxt = $.viget(inputkey);
 			if(inputtxt){
 				$('input[name="field1"]').val(inputtxt);
 			}
 
 			// clear the saved input
-			$.vclear(inputkey);
+			$.viclear(inputkey);
 
 			// load a textarea
-			var txt = $.vload('textareavalue');
+			var txt = $.viget('textareavalue');
 			if(txt){
 				$('textarea[name="txtarea"]').val(txt);
 			}
 
 			// how ro get all select boxes
 			$.each($('select'), function(){
-				$(this).find('option[value="' + $.vload('select' + $(this).attr('name')) + '"]').attr('selected', true);
+				$(this).find('option[value="' + $.viget('select' + $(this).attr('name')) + '"]').attr('selected', true);
 			});
 		});
 	</script>
