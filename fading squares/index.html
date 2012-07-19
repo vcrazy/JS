@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<style>div {width: 50px; height: 50px; float: left;}</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var wh = $(window).height(); // window height
+			var ww = $(window).width(); // window width
+			var mx = Math.floor(wh/50)*Math.floor(ww/50); // max squares
+			var sq = 0; // current number of squares
+
+			function fill(){
+				var r =(Math.round(Math.random()*256)).toString(16);
+				var b =(Math.round(Math.random()*256)).toString(16);
+				var g =(Math.round(Math.random()*256)).toString(16);
+
+				$('body').append('<div style="background-color: #' + r + b + g + ';">&nbsp;</div>');
+
+				sq += 1;
+
+				if(sq < mx){
+					setTimeout(fill, Math.round(Math.random()*100));
+				}else{
+					fd();
+				}
+			}
+
+			function fd(){
+				$('div:not(.o)').eq(Math.floor(Math.random()*sq)).animate({opacity: 0.01}, 'slow').addClass('o');
+				sq--;
+
+				if(sq){
+					setTimeout(fd, 100);
+				}else{
+					$('div').remove();
+					fill();
+				}
+			}
+
+			fill();
+		});
+	</script>
+</head>
+</html>

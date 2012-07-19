@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('body').keydown(function(e){
+				if(e.keyCode == 8){ // prevent backspace
+					return false;
+				}
+			});
+
+			var words = ['test', 'tralala', 'wohoo', 'word', 'append', 'business', 'alongword', 'hour', 'bomb', 'good', 'time', 'change', 'wood', 'speed', 'music', 'life', 'solar', 'summer', '2012', 'smile', 'fast', 'keyboard'];
+
+			var wh = $(window).height();
+			var ww = 100;
+			var wpc = Math.ceil((wh - 50) / 25);
+			var divs = 0;
+			var bw = $('body').width();
+
+			function generate_flying_word(){
+				var w = words[Math.floor(Math.random() * words.length)];
+
+				var top = wh - (divs % wpc) * 25 - 50;
+				var left = (Math.ceil((divs + 1) / wpc) - 1) * ww;
+
+				if(left >= bw){
+					return false;
+				}
+
+				$('body').append('<div class="' + w + '">' + w + '</div>');
+				$('div:last').css('position', 'absolute').css('marginLeft', left).animate({'margin-top': top}, Math.max(25, Math.round(5000 - 20*divs)));
+
+				divs += 1;
+
+				setTimeout(generate_flying_word, 50);
+			}
+
+			generate_flying_word();
+		});
+	</script>
+</head>
+<body style="margin: 0 auto; width: 980px;">
+	Points: <span id="points">0</span><br />
+</body>
+</html>
