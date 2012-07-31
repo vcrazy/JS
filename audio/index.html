@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="init.js"></script>
+	<script src="buffer-loader.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<style>
+		span {display: inline-block; width: 60px; height: 60px; margin: 10px; border: 1px solid green; border-radius: 5px; line-height: 60px; font-size: 60px; text-align: center;}
+		span:hover {cursor: pointer;}
+		span.a {background-color: #ff9999;}
+		span.b {background-color: #9999ff;}
+		span.c {background-color: #99ff99;}
+	</style>
+</head>
+<body style="margin: 0 auto; width: 980px; margin-top: 50px;">
+	<form style="font-size: 60px; text-align: center;">
+		Loading..<br /><br />
+		<progress max="100" value="0" style="width: 400px; height: 50px;"></progress>
+	</form>
+	<div id="kbd" style="display: none; text-align: left;">
+		<span class="a">Q</span>
+		<span class="a">W</span>
+		<span class="a">E</span>
+		<span class="a">R</span>
+		<span class="a">T</span>
+		<span class="a">Y</span>
+		<span class="b">U</span>
+		<span class="b">I</span>
+		<span class="c">O</span>
+		<span class="c">P</span><br />
+		<span class="a" style="margin-left: 20px;">A</span>
+		<span class="a">S</span>
+		<span class="a">D</span>
+		<span class="a">F</span>
+		<span class="a">G</span>
+		<span class="a">H</span>
+		<span class="b">J</span>
+		<span class="b">K</span>
+		<span class="c">L</span><br />
+		<span class="c" style="margin-left: 50px;">Z</span>
+		<span class="c">X</span>
+		<span class="c">C</span>
+		<span class="c">V</span>
+		<span class="c">B</span>
+		<span class="b">N</span>
+		<span class="b">M</span>
+	</div>
+</body>
+</html>
